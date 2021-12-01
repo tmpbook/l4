@@ -1,14 +1,14 @@
-adpiVersion: kubeadm.k8s.io/v1beta2
+apiVersion: kubeadm.k8s.io/v1beta2
 kind: InitConfiguration
 nodeRegistration:
   kubeletExtraArgs:
-    cgourp-driver: "systemd"
+    cgoup-driver: "systemd"
 ---
 apiVersion: kubeadm.k8s.io/v1beta2
 kind: ClusterConfiguration
-kubernetesVersion: "v1.18.8"
+kubernetesVersion: "v1.21.0"
 clusterName: "example-cluster"
-contrallerManager:
+controllerManager:
   extraArgs:
     horizontal-pod-autoscaler-sync-period: "10s"
     node-monitor-grace-period: "10s"
